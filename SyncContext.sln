@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncContext.Console", "SyncContext.Console\SyncContext.Console.csproj", "{93EEE742-6F22-4D6C-B0FA-4D6E65B3ECD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncContext.WPF", "SyncContext.WPF\SyncContext.WPF.csproj", "{C200BCD1-7952-4544-83D6-29D151828C8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncContext.ASP", "SyncContext.ASP\SyncContext.ASP.csproj", "{3836B228-1381-4B1E-B6BB-9A8F522E4044}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopQuiz", "PopQuiz\PopQuiz.csproj", "{5880D4DC-9C76-461E-89E6-373037D459BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93EEE742-6F22-4D6C-B0FA-4D6E65B3ECD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93EEE742-6F22-4D6C-B0FA-4D6E65B3ECD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93EEE742-6F22-4D6C-B0FA-4D6E65B3ECD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93EEE742-6F22-4D6C-B0FA-4D6E65B3ECD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C200BCD1-7952-4544-83D6-29D151828C8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C200BCD1-7952-4544-83D6-29D151828C8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C200BCD1-7952-4544-83D6-29D151828C8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C200BCD1-7952-4544-83D6-29D151828C8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3836B228-1381-4B1E-B6BB-9A8F522E4044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3836B228-1381-4B1E-B6BB-9A8F522E4044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3836B228-1381-4B1E-B6BB-9A8F522E4044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3836B228-1381-4B1E-B6BB-9A8F522E4044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5880D4DC-9C76-461E-89E6-373037D459BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5880D4DC-9C76-461E-89E6-373037D459BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5880D4DC-9C76-461E-89E6-373037D459BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5880D4DC-9C76-461E-89E6-373037D459BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
