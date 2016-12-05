@@ -16,13 +16,13 @@ namespace SyncContext.WPF
             InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private async void button_Click(object sender, RoutedEventArgs e)
         {
             var t1 = DoWorkAsync(1);
             var t2 = DoWorkAsync(2);
             var t3 = DoWorkAsync(3);
 
-            Task.WaitAll(t1, t2, t3);
+            await Task.WhenAll(t1, t2, t3);
 
             Log("Finished all jobs");
         }
@@ -38,18 +38,18 @@ namespace SyncContext.WPF
         #region ConfigureAwait
 
 
-        private void button2_Click(object sender, RoutedEventArgs e)
+        private async void button2_Click(object sender, RoutedEventArgs e)
         {
-            Log($"Start button click handler on '{SynchronizationContext.Current}'");
-            DoMoreWorkAsync().Wait();
-            Log($"End button click handler on '{SynchronizationContext.Current}'");
+            Log($"Start button click handler on '{SynchronizationContext.Current}'"); // DispatcherSynchronzitationContext
+            await DoMoreWorkAsync();
+            Log($"End button click handler on '{SynchronizationContext.Current}'"); // DispatcherSynchronzationContext again
         }
 
         static async Task DoMoreWorkAsync()
         {
-            Log($"Starting job on '{SynchronizationContext.Current}'");
-            await Task.Delay(1000);
-            Log($"Finished job on '{SynchronizationContext.Current}'");
+            Log($"Starting job on '{SynchronizationContext.Current}'"); // DispatcherSynchronizationContext
+            await Task.Delay(1000).ConfigureAwait(false);
+            Log($"Finished job on '{SynchronizationContext.Current}'"); // null
         }
 
         #endregion

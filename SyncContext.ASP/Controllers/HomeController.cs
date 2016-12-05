@@ -7,13 +7,13 @@ namespace SyncContext.ASP.Controllers
 {
     public class HomeController : Controller
     {
-        public ViewResult Index()
+        public async Task<ViewResult> Index()
         {
             Log($"Calling DoStuffAsync(1) on '{SynchronizationContext.Current}'");
-            DoStuffAsync(1).Wait();
+            await DoStuffAsync(1);
 
             Log($"Calling DoStuffAsync(2) on '{SynchronizationContext.Current}'");
-            DoStuffAsync(2).Wait();
+            await DoStuffAsync(2);
 
             Log($"Return view on '{SynchronizationContext.Current}'");
             return View();
@@ -22,13 +22,13 @@ namespace SyncContext.ASP.Controllers
         async Task DoStuffAsync(int id)
         {
             Log($"Starting job {id} on '{SynchronizationContext.Current}'");
-            await Task.Delay(1000);
+            await Task.Delay(1000).ConfigureAwait(false);
             Log($"Finished job {id} on '{SynchronizationContext.Current}'");
         }
 
-        private static void Log(string log)
+        private void Log(string log)
         {
-            System.Web.HttpContext.Current.Response.Write($"{DateTime.Now.ToString("T")} - {log} (Thread:{Thread.CurrentThread.ManagedThreadId}) <br/>");
+            HttpContext.Response.Write($"{DateTime.Now.ToString("T")} - {log} (Thread:{Thread.CurrentThread.ManagedThreadId}) <br/>");
         }
     }
 }
